@@ -10,6 +10,12 @@
 #import "SWRevealViewController.h"
 
 @interface MainViewController ()
+{
+    NSMutableArray *photos;
+    NSTimer *timer;
+    int currentImage;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *slide;
 
 @end
 
@@ -41,7 +47,58 @@
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    photos = [[NSMutableArray alloc] init];
+    
+    NSXMLParser *photoParser = [[NSXMLParser alloc]
+                                 initWithContentsOfURL:[NSURL URLWithString:
+                                                        @"http://localhost:8888/app_teste_local/index.xml"]];
+    [photoParser setDelegate:self];
+    [photoParser parse];
+    
+    currentImage = 0;
+    
+    NSURL *imageURL = [NSURL URLWithString:[photos objectAtIndex:0]];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    [_slide setImage:[UIImage imageWithData:imageData]];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                             target: self
+                                           selector: @selector(handleTimer:)
+                                           userInfo: nil
+                                            repeats: YES];
+    
+}
 
+- (void) handleTimer: (NSTimer *) timer {
+    currentImage++;
+    if ( currentImage >= photos.count )
+        currentImage = 0;
+    
+    NSURL *imageURL = [NSURL URLWithString:[photos objectAtIndex:currentImage]];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    [_slide setImage:[UIImage imageWithData:imageData]];
+    //[self fadeInImage];
+}
+
+- (void)fadeInImage
+{
+    if (_slide.alpha == 0) {
+        _slide.alpha =1.0;
+    }
+    [UIView beginAnimations:@"fade in" context:nil];
+    [UIView setAnimationDuration:4.0];
+    _slide.alpha = 0;
+    [UIView commitAnimations];
+    
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+    attributes:(NSDictionary *)attributeDict {
+    if ( [elementName isEqualToString:@"photo"]) {
+        [photos addObject:[attributeDict objectForKey:@"url"]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

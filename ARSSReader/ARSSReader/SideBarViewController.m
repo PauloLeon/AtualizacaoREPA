@@ -33,12 +33,12 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+    //self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    //self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    //self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
     
-    menuItems = @[@"title", @"inicio", @"feed"];
+    menuItems = @[@"title", @"inicio", @"noticias",@"classificacao",@"estadio",@"historico",@"elenco",@"hino",@"charge",@"4mindsenterprises"];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -88,11 +88,11 @@
     destViewController.title = [[menuItems objectAtIndex:indexPath.row] capitalizedString];
     
     // Set the photo if it navigates to the PhotoView
-    if ([segue.identifier isEqualToString:@"showPhoto"]) {
-        MasterViewController *photoController = (MasterViewController*)segue.destinationViewController;
+    //if ([segue.identifier isEqualToString:@"showPhoto"]) {
+      //  MasterViewController *photoController = (MasterViewController*)segue.destinationViewController;
         //NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [menuItems objectAtIndex:indexPath.row]];
         //photoController.photoFilename = photoFilename;
-    }
+    //}
     
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
         SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;

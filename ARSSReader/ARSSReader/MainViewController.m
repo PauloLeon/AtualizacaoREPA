@@ -16,6 +16,7 @@
     int currentImage;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *slide;
+@property (weak, nonatomic) IBOutlet UIWebView *webProximoJogo;
 
 @end
 
@@ -52,7 +53,7 @@
     
     NSXMLParser *photoParser = [[NSXMLParser alloc]
                                  initWithContentsOfURL:[NSURL URLWithString:
-                                                        @"http://localhost:8888/app_teste_local/index.xml"]];
+                                                        @"http://localhost:8888/index.xml"]];
     [photoParser setDelegate:self];
     [photoParser parse];
     
@@ -67,6 +68,11 @@
                                            selector: @selector(handleTimer:)
                                            userInfo: nil
                                             repeats: YES];
+    
+    NSURL *url1 = [NSURL URLWithString:@"http://parazao.orm.com.br/jogos_classificacao.php#"];
+    NSURLRequest* articleRequest = [NSURLRequest requestWithURL:url1];
+    _webProximoJogo.backgroundColor = [UIColor clearColor];
+    [_webProximoJogo loadRequest: articleRequest];
     
 }
 

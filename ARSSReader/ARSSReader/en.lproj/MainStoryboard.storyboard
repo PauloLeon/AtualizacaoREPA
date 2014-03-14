@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wcZ-6W-VMZ">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -11,6 +11,7 @@
                 <navigationController id="3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="PPA-2d-qrc" kind="relationship" relationship="rootViewController" id="yi6-Xs-0L4"/>
@@ -33,12 +34,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4z6-m7-0X3">
-                                <rect key="frame" x="0.0" y="64" width="320" height="183"/>
+                                <rect key="frame" x="20" y="64" width="280" height="183"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thi-DE-Zpy">
+                                <rect key="frame" x="20" y="247" width="280" height="272"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="m0q-oy-b9X">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="sOW-xr-XKQ"/>
@@ -46,6 +52,7 @@
                     <connections>
                         <outlet property="barButton" destination="sOW-xr-XKQ" id="SYj-rX-M6H"/>
                         <outlet property="slide" destination="4z6-m7-0X3" id="7dT-TF-5V7"/>
+                        <outlet property="webProximoJogo" destination="thi-DE-Zpy" id="oS9-PS-JJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtY-IC-Htp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +225,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yf7-G4-uYN"/>
+        <segue reference="yi6-Xs-0L4"/>
     </inferredMetricsTieBreakers>
 </document>

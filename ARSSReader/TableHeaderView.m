@@ -17,7 +17,7 @@
 
 - (id)initWithText:(NSString*)text
 {
-	UIImage* img = [UIImage imageNamed:@"arss_header.png"];
+	UIImage* img = [UIImage imageNamed:@"head_feed_remo.png"] ;
     if ((self = [super initWithImage:img])) {
         // Initialization code
 		label = [[UILabel alloc] initWithFrame:CGRectMake(20,10,200,70)];
@@ -28,7 +28,7 @@
 		label.font = [UIFont systemFontOfSize:20];
 		label.text = text;
 		label.numberOfLines = 2;
-		[self addSubview:label];
+		//[self addSubview:label];
     }
     return self;
 }

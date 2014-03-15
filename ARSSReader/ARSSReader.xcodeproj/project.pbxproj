@@ -36,6 +36,7 @@
 		9C947BBB163E835500842C2F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BBA163E835500842C2F /* DetailViewController.m */; };
 		F200135218D29A2A00D19BF9 /* Bola-de-Futebol-de-Campo-do-gramado-Grama-Incêndios-1024x1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F200135118D29A2A00D19BF9 /* Bola-de-Futebol-de-Campo-do-gramado-Grama-Incêndios-1024x1280.jpg */; };
 		F200135418D2B0F000D19BF9 /* background_inicio.png in Resources */ = {isa = PBXBuildFile; fileRef = F200135318D2B0F000D19BF9 /* background_inicio.png */; };
+		F200135618D2B68A00D19BF9 /* proximo_jogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F200135518D2B68A00D19BF9 /* proximo_jogo.png */; };
 		F2A5BBAF18CE8A2800ED2039 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5BBAE18CE8A2800ED2039 /* SWRevealViewController.m */; };
 		F2A5BBB318CE8EFB00ED2039 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5BBB218CE8EFB00ED2039 /* MainViewController.m */; };
 		F2A5BBB618CE8FEA00ED2039 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A5BBB418CE8FEA00ED2039 /* menu.png */; };
@@ -84,6 +85,7 @@
 		9C947BBA163E835500842C2F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F200135118D29A2A00D19BF9 /* Bola-de-Futebol-de-Campo-do-gramado-Grama-Incêndios-1024x1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bola-de-Futebol-de-Campo-do-gramado-Grama-Incêndios-1024x1280.jpg"; sourceTree = "<group>"; };
 		F200135318D2B0F000D19BF9 /* background_inicio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_inicio.png; sourceTree = "<group>"; };
+		F200135518D2B68A00D19BF9 /* proximo_jogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proximo_jogo.png; sourceTree = "<group>"; };
 		F2A5BBAD18CE8A2800ED2039 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F2A5BBAE18CE8A2800ED2039 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F2A5BBB118CE8EFB00ED2039 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				F2A5BBB418CE8FEA00ED2039 /* menu.png */,
 				F2A5BBB518CE8FEA00ED2039 /* menu@2x.png */,
 				F200135118D29A2A00D19BF9 /* Bola-de-Futebol-de-Campo-do-gramado-Grama-Incêndios-1024x1280.jpg */,
+				F200135518D2B68A00D19BF9 /* proximo_jogo.png */,
 				F200135318D2B0F000D19BF9 /* background_inicio.png */,
 				F2A5BBB018CE8A5A00ED2039 /* Library */,
 				9C1806D5163E875300A02D94 /* ReaderClasses */,
@@ -310,6 +313,7 @@
 				9C1806B7163E848100A02D94 /* iTunesArtwork in Resources */,
 				9C1806BC163E848D00A02D94 /* Default.png in Resources */,
 				9C1806BD163E848D00A02D94 /* Default@2x.png in Resources */,
+				F200135618D2B68A00D19BF9 /* proximo_jogo.png in Resources */,
 				9C1806C0163E84AB00A02D94 /* arss_header.png in Resources */,
 				9C1806CE163E868400A02D94 /* Default-568h@2x.png in Resources */,
 			);

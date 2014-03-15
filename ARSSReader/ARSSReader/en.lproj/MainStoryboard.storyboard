@@ -38,13 +38,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thi-DE-Zpy">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thi-DE-Zpy">
                                 <rect key="frame" x="20" y="247" width="280" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" red="0.058823529411764705" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.1019607843" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="m0q-oy-b9X">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="sOW-xr-XKQ"/>

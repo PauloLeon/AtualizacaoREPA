@@ -69,7 +69,7 @@
                                            userInfo: nil
                                             repeats: YES];
     
-    NSURL *url1 = [NSURL URLWithString:@"http://parazao.orm.com.br/jogos_classificacao.php#"];
+    NSURL *url1 = [NSURL URLWithString:@"http://localhost:8888/photos/proximo_jogo.png"];
     NSURLRequest* articleRequest = [NSURLRequest requestWithURL:url1];
     _webProximoJogo.backgroundColor = [UIColor clearColor];
     [_webProximoJogo loadRequest: articleRequest];

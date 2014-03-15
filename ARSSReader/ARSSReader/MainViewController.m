@@ -36,8 +36,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _webProximoJogo.hidden= YES;
+    NSURL *url1 = [NSURL URLWithString:@"http://localhost:8888/photos/proximo_jogo.png"];
+    NSURLRequest* articleRequest = [NSURLRequest requestWithURL:url1];
+    _webProximoJogo.backgroundColor = [[UIColor alloc]initWithRed:15 green:26 blue:48 alpha:1.0];
+    [_webProximoJogo loadRequest: articleRequest];
     
-    self.title = @"News";
+    self.title = @"Início";
     
     // Change button color
     _barButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -49,7 +54,7 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    photos = [[NSMutableArray alloc] init];
+     photos = [[NSMutableArray alloc] init];
     
     NSXMLParser *photoParser = [[NSXMLParser alloc]
                                  initWithContentsOfURL:[NSURL URLWithString:
@@ -69,10 +74,9 @@
                                            userInfo: nil
                                             repeats: YES];
     
-    NSURL *url1 = [NSURL URLWithString:@"http://parazao.orm.com.br/jogos_classificacao.php#"];
-    NSURLRequest* articleRequest = [NSURLRequest requestWithURL:url1];
-    _webProximoJogo.backgroundColor = [UIColor clearColor];
-    [_webProximoJogo loadRequest: articleRequest];
+    if (_webProximoJogo.isLoading==NO) {
+        _webProximoJogo.hidden= NO;
+    }
     
 }
 

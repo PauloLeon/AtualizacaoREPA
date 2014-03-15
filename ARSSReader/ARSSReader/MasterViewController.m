@@ -34,14 +34,15 @@
     //add refresh control to the table view
     refreshControl = [[UIRefreshControl alloc] init];
     
+    
     [refreshControl addTarget:self
                        action:@selector(refreshInvoked:forState:)
              forControlEvents:UIControlEventValueChanged];
     
-    NSString* fetchMessage = [NSString stringWithFormat:@"Fetching: %@",feedURL];
+   // NSString* fetchMessage = [NSString stringWithFormat:@"Fetching: %@",feedURL];
     
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:fetchMessage
-                                                                     attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
+   // refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:fetchMessage
+   //                                  attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
     
     [self.tableView addSubview: refreshControl];
     
